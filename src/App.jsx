@@ -1,33 +1,20 @@
-import { useEffect } from 'react';
-import './App.css'
-import Pokelist from './components/pokelist'
-import { Link, useNavigate } from 'react-router'
+import { useState } from 'react';
+import './App.css';
+import BookCover from './components/BookCover';
+import BookPages from './components/BookPages';
 
 function App() {
-  const navigate = useNavigate();
-  console.log(navigate);
-
-  useEffect(() => {
-    console.log("App component mounted");
-
-    // setTimeout(() =>
-      // redirectToDetails()
-      // , 5000);
-
-  }, []);
-
-  const redirectToDetails = () => {
-    navigate('/pokemonDetails');
-  }
+  const [bookOpen, setBookOpen] = useState(false);
 
   return (
-    <div>
-
-      <Link to="/pokemonDetails">Voir les détails du Pokémon</Link>
-      <Pokelist></Pokelist>
+    <div className="gameboy-app">
+      {bookOpen ? (
+        <BookPages onClose={() => setBookOpen(false)} />
+      ) : (
+        <BookCover onOpen={() => setBookOpen(true)} />
+      )}
     </div>
-  )
-
+  );
 }
 
-export default App
+export default App;
