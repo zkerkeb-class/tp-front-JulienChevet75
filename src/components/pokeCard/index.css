@@ -21,13 +21,13 @@
     align-items: center;
     justify-content: flex-start;
     padding: 10px 12px;
-    width: 100%;  /* ✅ Pleine largeur */
+    width: 100%;  
 
     background-color: #000000;
-    border: 3px solid rgba(0,0,0,0.2);  /* ✅ Bordure rétro */
+    border: 3px solid rgba(0,0,0,0.2); 
     box-shadow: 
         0 4px 6px rgba(0,0,0,0.3),
-        inset 0 2px 4px rgba(255,255,255,0.2);  /* ✅ Relief */
+        inset 0 2px 4px rgba(255,255,255,0.2);
 }
 
 .poke-image {
@@ -50,7 +50,7 @@
     justify-content: space-between;
     padding: 0px 8px;
     font-size: 11px;
-    color: #4B5EE8;  /* ✅ Bleu rétro stats */
+    color: #4B5EE8; 
     font-weight: bold;
 }
 

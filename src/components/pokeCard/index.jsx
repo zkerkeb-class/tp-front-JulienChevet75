@@ -5,7 +5,7 @@ const PokeCard = ({ pokemon }) => {
   const primaryType = pokemon.type[0].toLowerCase();
 
   return (
-    <Link to={`/pokemonDetails/${pokemon.id}`}>
+    <Link to={`/PokemonDetails/${pokemon.id}`}>
       <div className="poke-card" data-type={primaryType}>
         <div className={`poke-card-header poke-type-${primaryType}`}>
           <h3 className="poke-title">{pokemon.name.french}</h3>

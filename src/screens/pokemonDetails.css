@@ -1,0 +1,265 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+.pokemon-details {
+  min-height: 100vh;
+  background: #0F380F;
+  font-family: 'Press Start 2P', cursive !important;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 30px 30px 30px;
+  gap: 30px;
+}
+
+.detail-card {
+  background: #f0f0e8;
+  border: 6px solid #0F380F;
+  width: 95%;
+  max-width: 900px;
+  padding: 40px 30px 30px 30px;
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+  position: relative;
+  box-shadow: 8px 8px 0 #0F380F;
+}
+
+.detail-header {
+  position: absolute;
+  top: -22px;
+  left: 20px;
+  background: #0F380F;
+  color: #9BBC0F !important;
+  padding: 12px 24px;
+  font-size: 16px !important;
+  font-family: 'Press Start 2P', cursive !important;
+  font-weight: bold;
+  text-transform: uppercase;
+  border: 3px solid #9BBC0F;
+  box-shadow: 4px 4px 0 #000;
+  white-space: nowrap;
+}
+
+.detail-image img {
+  width: 260px;
+  height: 260px;
+  border: 6px solid #0F380F;
+  box-shadow: 6px 6px 0 #0F380F;
+  display: block;
+  image-rendering: pixelated;
+}
+
+.detail-stats {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  font-family: 'Press Start 2P', cursive !important;
+}
+
+.stat-section {
+  background: #f0f0e8;
+  border: 4px solid #9BBC0F;
+  padding: 20px;
+}
+
+.stat-section h3 {
+  font-size: 14px !important;
+  font-family: 'Press Start 2P', cursive !important;
+  margin-bottom: 15px;
+  text-align: center;
+  text-transform: uppercase;
+  padding-bottom: 8px;
+  border-bottom: 3px solid #9BBC0F;
+  color: #0F380F;
+}
+
+.stat-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  font-size: 14px !important;
+  font-family: 'Press Start 2P', cursive !important;
+  border-bottom: 1px solid rgba(15,56,15,0.2);
+  color: #0F380F;
+}
+
+.stat-value {
+  font-weight: bold;
+}
+
+.types {
+  grid-column: 1 / -1;
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.type-badge {
+  background: #0F380F;
+  color: #9BBC0F;
+  padding: 10px 18px;
+  border: 3px solid #9BBC0F;
+  font-size: 13px !important;
+  font-family: 'Press Start 2P', cursive !important;
+  font-weight: bold;
+  text-transform: uppercase;
+  box-shadow: 3px 3px 0 #000;
+}
+
+.back-btn {
+  background: #0F380F;
+  color: #9BBC0F !important;
+  border: 4px solid #9BBC0F;
+  padding: 16px 32px;
+  font-family: 'Press Start 2P', cursive !important;
+  font-size: 14px !important;
+  cursor: pointer;
+  text-transform: uppercase;
+  box-shadow: 4px 4px 0 #000;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.back-btn:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0 #000;
+}
+
+.detail-card[data-type="normal"] .detail-header,
+.detail-card[data-type="normal"] .stat-section h3,
+.detail-card[data-type="normal"] .stat-row { color: #A8A878 !important; }
+.detail-card[data-type="normal"] .stat-section { border-color: #A8A878; }
+.detail-card[data-type="normal"] .stat-section h3 { border-color: #A8A878; }
+
+.detail-card[data-type="fire"] .detail-header,
+.detail-card[data-type="fire"] .stat-section h3,
+.detail-card[data-type="fire"] .stat-row { color: #DD6610 !important; }
+.detail-card[data-type="fire"] .stat-section { border-color: #DD6610; }
+.detail-card[data-type="fire"] .stat-section h3 { border-color: #DD6610; }
+
+.detail-card[data-type="water"] .detail-header,
+.detail-card[data-type="water"] .stat-section h3,
+.detail-card[data-type="water"] .stat-row { color: #6890F0 !important; }
+.detail-card[data-type="water"] .stat-section { border-color: #6890F0; }
+.detail-card[data-type="water"] .stat-section h3 { border-color: #6890F0; }
+
+.detail-card[data-type="grass"] .detail-header,
+.detail-card[data-type="grass"] .stat-section h3,
+.detail-card[data-type="grass"] .stat-row { color: #78C850 !important; }
+.detail-card[data-type="grass"] .stat-section { border-color: #78C850; }
+.detail-card[data-type="grass"] .stat-section h3 { border-color: #78C850; }
+
+.detail-card[data-type="electric"] .detail-header,
+.detail-card[data-type="electric"] .stat-section h3,
+.detail-card[data-type="electric"] .stat-row { color: #F8D030 !important; }
+.detail-card[data-type="electric"] .stat-section { border-color: #F8D030; }
+.detail-card[data-type="electric"] .stat-section h3 { border-color: #F8D030; }
+
+.detail-card[data-type="ice"] .detail-header,
+.detail-card[data-type="ice"] .stat-section h3,
+.detail-card[data-type="ice"] .stat-row { color: #98D8D8 !important; }
+.detail-card[data-type="ice"] .stat-section { border-color: #98D8D8; }
+.detail-card[data-type="ice"] .stat-section h3 { border-color: #98D8D8; }
+
+.detail-card[data-type="fighting"] .detail-header,
+.detail-card[data-type="fighting"] .stat-section h3,
+.detail-card[data-type="fighting"] .stat-row { color: #C03028 !important; }
+.detail-card[data-type="fighting"] .stat-section { border-color: #C03028; }
+.detail-card[data-type="fighting"] .stat-section h3 { border-color: #C03028; }
+
+.detail-card[data-type="poison"] .detail-header,
+.detail-card[data-type="poison"] .stat-section h3,
+.detail-card[data-type="poison"] .stat-row { color: #A040A0 !important; }
+.detail-card[data-type="poison"] .stat-section { border-color: #A040A0; }
+.detail-card[data-type="poison"] .stat-section h3 { border-color: #A040A0; }
+
+.detail-card[data-type="ground"] .detail-header,
+.detail-card[data-type="ground"] .stat-section h3,
+.detail-card[data-type="ground"] .stat-row { color: #E0C068 !important; }
+.detail-card[data-type="ground"] .stat-section { border-color: #E0C068; }
+.detail-card[data-type="ground"] .stat-section h3 { border-color: #E0C068; }
+
+.detail-card[data-type="flying"] .detail-header,
+.detail-card[data-type="flying"] .stat-section h3,
+.detail-card[data-type="flying"] .stat-row { color: #A890F0 !important; }
+.detail-card[data-type="flying"] .stat-section { border-color: #A890F0; }
+.detail-card[data-type="flying"] .stat-section h3 { border-color: #A890F0; }
+
+.detail-card[data-type="psychic"] .detail-header,
+.detail-card[data-type="psychic"] .stat-section h3,
+.detail-card[data-type="psychic"] .stat-row { color: #F85888 !important; }
+.detail-card[data-type="psychic"] .stat-section { border-color: #F85888; }
+.detail-card[data-type="psychic"] .stat-section h3 { border-color: #F85888; }
+
+.detail-card[data-type="bug"] .detail-header,
+.detail-card[data-type="bug"] .stat-section h3,
+.detail-card[data-type="bug"] .stat-row { color: #A8B820 !important; }
+.detail-card[data-type="bug"] .stat-section { border-color: #A8B820; }
+.detail-card[data-type="bug"] .stat-section h3 { border-color: #A8B820; }
+
+.detail-card[data-type="rock"] .detail-header,
+.detail-card[data-type="rock"] .stat-section h3,
+.detail-card[data-type="rock"] .stat-row { color: #B8A038 !important; }
+.detail-card[data-type="rock"] .stat-section { border-color: #B8A038; }
+.detail-card[data-type="rock"] .stat-section h3 { border-color: #B8A038; }
+
+.detail-card[data-type="ghost"] .detail-header,
+.detail-card[data-type="ghost"] .stat-section h3,
+.detail-card[data-type="ghost"] .stat-row { color: #705898 !important; }
+.detail-card[data-type="ghost"] .stat-section { border-color: #705898; }
+.detail-card[data-type="ghost"] .stat-section h3 { border-color: #705898; }
+
+.detail-card[data-type="dragon"] .detail-header,
+.detail-card[data-type="dragon"] .stat-section h3,
+.detail-card[data-type="dragon"] .stat-row { color: #7038F8 !important; }
+.detail-card[data-type="dragon"] .stat-section { border-color: #7038F8; }
+.detail-card[data-type="dragon"] .stat-section h3 { border-color: #7038F8; }
+
+.detail-card[data-type="dark"] .detail-header,
+.detail-card[data-type="dark"] .stat-section h3,
+.detail-card[data-type="dark"] .stat-row { color: #705848 !important; }
+.detail-card[data-type="dark"] .stat-section { border-color: #705848; }
+.detail-card[data-type="dark"] .stat-section h3 { border-color: #705848; }
+
+.detail-card[data-type="steel"] .detail-header,
+.detail-card[data-type="steel"] .stat-section h3,
+.detail-card[data-type="steel"] .stat-row { color: #B8B8D0 !important; }
+.detail-card[data-type="steel"] .stat-section { border-color: #B8B8D0; }
+.detail-card[data-type="steel"] .stat-section h3 { border-color: #B8B8D0; }
+
+.detail-card[data-type="fairy"] .detail-header,
+.detail-card[data-type="fairy"] .stat-section h3,
+.detail-card[data-type="fairy"] .stat-row { color: #EE99AC !important; }
+.detail-card[data-type="fairy"] .stat-section { border-color: #EE99AC; }
+.detail-card[data-type="fairy"] .stat-section h3 { border-color: #EE99AC; }
+
+
+@media (max-width: 768px) {
+  .detail-card { flex-direction: column; align-items: center; padding: 40px 20px 20px 20px; }
+  .detail-stats { grid-template-columns: 1fr; }
+  .detail-image img { width: 200px; height: 200px; }
+  .detail-header { font-size: 12px !important; }
+}
+
+
+.type-badge.poke-type-normal { background: #A8A878; border-color: #A8A878; color: #fff; }
+.type-badge.poke-type-fire { background: #DD6610; border-color: #DD6610; color: #fff; }
+.type-badge.poke-type-water { background: #6890F0; border-color: #6890F0; color: #fff; }
+.type-badge.poke-type-grass { background: #78C850; border-color: #78C850; color: #fff; }
+.type-badge.poke-type-electric { background: #F8D030; border-color: #F8D030; color: #0F380F; }
+.type-badge.poke-type-ice { background: #98D8D8; border-color: #98D8D8; color: #0F380F; }
+.type-badge.poke-type-fighting { background: #C03028; border-color: #C03028; color: #fff; }
+.type-badge.poke-type-poison { background: #A040A0; border-color: #A040A0; color: #fff; }
+.type-badge.poke-type-ground { background: #E0C068; border-color: #E0C068; color: #0F380F; }
+.type-badge.poke-type-flying { background: #A890F0; border-color: #A890F0; color: #fff; }
+.type-badge.poke-type-psychic { background: #F85888; border-color: #F85888; color: #fff; }
+.type-badge.poke-type-bug { background: #A8B820; border-color: #A8B820; color: #fff; }
+.type-badge.poke-type-rock { background: #B8A038; border-color: #B8A038; color: #fff; }
+.type-badge.poke-type-ghost { background: #705898; border-color: #705898; color: #fff; }
+.type-badge.poke-type-dragon { background: #7038F8; border-color: #7038F8; color: #fff; }
+.type-badge.poke-type-dark { background: #705848; border-color: #705848; color: #fff; }
+.type-badge.poke-type-steel { background: #B8B8D0; border-color: #B8B8D0; color: #0F380F; }
+.type-badge.poke-type-fairy { background: #EE99AC; border-color: #EE99AC; color: #fff; }
